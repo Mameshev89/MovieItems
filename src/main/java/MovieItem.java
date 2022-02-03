@@ -4,9 +4,14 @@ public class MovieItem {
     private String movieName;
 
 
-    public MovieItem(int id, String ganrName, String movieName, int count) {
+    public MovieItem(int id, String ganrName, String movieName) {
         this.id = id;
         this.ganrName = ganrName;
         this.movieName = movieName;
     }
+
+    public int getId() {
+        return id;
+    }
+
 }
