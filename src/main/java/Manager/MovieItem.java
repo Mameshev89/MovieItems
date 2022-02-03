@@ -1,3 +1,5 @@
+package Manager;
+
 public class MovieItem {
     private int id;
     private String ganrName;
