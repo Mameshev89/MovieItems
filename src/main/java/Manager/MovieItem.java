@@ -2,13 +2,13 @@ package Manager;
 
 public class MovieItem {
     private int id;
-    private String ganrName;
+    private String genreName;
     private String movieName;
 
 
-    public MovieItem(int id, String ganrName, String movieName) {
+    public MovieItem(int id, String genreName, String movieName) {
         this.id = id;
-        this.ganrName = ganrName;
+        this.genreName = genreName;
         this.movieName = movieName;
     }
 
