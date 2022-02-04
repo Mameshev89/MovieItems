@@ -1,9 +1,7 @@
 package Manager;
 
-import Manager.MovieItem;
-
 public class MovieManager {
-    private int resultLength = 3;
+    private int resultLength = 10;
     private MovieItem[] items = new MovieItem[0];
 
 
@@ -14,16 +12,17 @@ public class MovieManager {
     public MovieManager() {
     }
 
-    public void save(MovieItem item) {
+    public MovieItem[] save(MovieItem item) {
         MovieItem[] tmt = new MovieItem[items.length + 1];
         for (int i = 0; i < items.length; i++) {
             tmt[i] = items[i];
         }
         tmt[tmt.length - 1] = item;
         items = tmt;
+        return items;
     }
 
-    public void removeId(int id) {
+    public MovieItem[] removeId(int id) {
         MovieItem[] tmt = new MovieItem[items.length - 1];
         int index = 0;
         for (MovieItem item : items) {
@@ -33,6 +32,7 @@ public class MovieManager {
             }
             items = tmt;
         }
+        return items;
     }
 
     public MovieItem[] findAll() {
